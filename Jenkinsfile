@@ -1,6 +1,9 @@
 #!/bin/Groovy
 pipeline {
     agent any
+    tools {
+         terraform "terraform 11"
+    }
     stages {
         stage('Workspace') {
            
