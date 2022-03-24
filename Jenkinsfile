@@ -2,6 +2,14 @@
 pipeline {
     agent any
     stages {
+        stage('Workspace') {
+           
+            steps {
+                sh 'cd /var/lib/jenkins/workspace/Terraform-Project'
+                
+            }
+        }
+        
         stage('Terraform Initialize') {
            
             steps {
